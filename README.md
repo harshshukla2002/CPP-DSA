@@ -11,5 +11,9 @@
 3.  Operator
 4.  Type Casting
 5.  Conditional Statements
+6.  Loops
+7.  Functions
+8.  Bitwise Operator
+9.  Arrays
 
 ---
