@@ -15,5 +15,6 @@
 7.  Functions
 8.  Bitwise Operator
 9.  Arrays
+10. Vectors
 
 ---
