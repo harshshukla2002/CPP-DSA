@@ -17,5 +17,9 @@
 9.  Arrays
 10. Vectors
 11. STL Libraries
+12. 2D Arrays
+13. Sorting
+14. Strings
+15. Recursion and Backtracking
 
 ---
