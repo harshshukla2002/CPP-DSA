@@ -21,5 +21,9 @@
 13. Sorting
 14. Strings
 15. Recursion and Backtracking
+16. Linked Lists
+17. Stacks
+18. Queues
+19. Binary Trees
 
 ---
