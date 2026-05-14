@@ -14,27 +14,15 @@ class TreeNode {
     }
 };
 
-void allPaths(TreeNode* root, string path, vector<string>& ans) {
-    if (root->left == NULL && root->right == NULL) {
-        ans.push_back(path);
-        return;
-    }
+int sumTree(TreeNode* root) {
+    if (root == NULL) return 0;
 
-    if (root->left) {
-        allPaths(root->left, path + "->" + to_string(root->left->val), ans);
-    }
+    int leftSum = sumTree(root->left);
+    int rightSum = sumTree(root->right);
 
-    if (root->right) {
-        allPaths(root->right, path + "->" + to_string(root->right->val), ans);
-    }
-}
+    root->val += leftSum + rightSum;
 
-vector<string> binaryTreePaths(TreeNode* root) {
-    vector<string> ans;
-    string path = to_string(root->val);
-
-    allPaths(root, path, ans);
-    return ans;
+    return root->val;
 }
 
 int main() {
