@@ -1,10 +1,8 @@
 # CPP-DSA
 
-> Learing DSA in C++;
+> Learing DSA in `C++`;
 
 ## Topics
-
-### first learning basic CPP
 
 1.  Variables
 2.  Data Types
@@ -25,5 +23,6 @@
 17. Stacks
 18. Queues
 19. Binary Trees
+20. Binary Search Trees
 
 ---
