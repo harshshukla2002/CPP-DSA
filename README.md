@@ -24,5 +24,6 @@
 18. Queues
 19. Binary Trees
 20. Binary Search Trees
+21. Graph
 
 ---
