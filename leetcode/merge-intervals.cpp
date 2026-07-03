@@ -12,15 +12,19 @@ class Solution {
         output.push_back(intervals[0]);
 
         for (int i = 1; i < intervals.size(); i++) {
-            int start = intervals[i][0];
-            int end = intervals[i][1];
+            int currentStart = intervals[i][0];
+            int currentEnd = intervals[i][1];
 
-            int lastEnd = output.back()[1];
+            int lastIndex = output.size() - 1;
 
-            if (start <= lastEnd) {
-                output.back()[1] = max(lastEnd, end);
+            int previousStart = output[lastIndex][0];
+            int previousEnd = output[lastIndex][1];
+
+            if (currentStart <= previousEnd) {
+                output[lastIndex][1] = max(previousEnd, currentEnd);
+
             } else {
-                output.push_back({start, end});
+                output.push_back(intervals[i]);
             }
         }
 
