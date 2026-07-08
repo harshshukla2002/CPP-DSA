@@ -2,27 +2,19 @@
 #include <stack>
 using namespace std;
 
-bool isValid(string str)
-{
+bool isValid(string str) {
     stack<char> st;
 
-    for (char c : str)
-    {
-        if (c == '(' || c == '{' || c == '[')
-        {
+    for (char c : str) {
+        if (c == '(' || c == '{' || c == '[') {
             st.push(c);
-        }
-        else
-        {
+        } else {
             if (st.size() == 0)
                 return false;
 
-            if (c == ')' && st.top() == '(' || c == '}' && st.top() == '{' || c == ']' && st.top() == '[')
-            {
+            if (c == ')' && st.top() == '(' || c == '}' && st.top() == '{' || c == ']' && st.top() == '[') {
                 st.pop();
-            }
-            else
-            {
+            } else {
                 return false;
             }
         }
@@ -31,8 +23,7 @@ bool isValid(string str)
     return st.size() == 0;
 }
 
-int main()
-{
+int main() {
     cout << "Boiler Plate Code" << endl;
     return 0;
 }
