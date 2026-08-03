@@ -2,65 +2,39 @@
 #include <stack>
 using namespace std;
 
-class MinStack
-{
-    stack<long long int> st;
-    long long int minVal;
+class MinStack {
+   public:
+    stack<int> st;
+    stack<int> minSt;
 
-public:
-    MinStack()
-    {
+    MinStack() {
     }
 
-    void push(int val)
-    {
-        if (st.empty())
-        {
-            st.push(val);
-            minVal = val;
-        }
-        else
-        {
-            if (val < minVal)
-            {
-                st.push((long long)2 * val - minVal);
-                minVal = val;
-            }
-            else
-            {
-                st.push(val);
-            }
+    void push(int val) {
+        st.push(val);
+
+        if (minSt.empty() || val <= minSt.top()) {
+            minSt.push(val);
         }
     }
 
-    void pop()
-    {
-        if (st.top() < minVal)
-        {
-            minVal = 2 * minVal - st.top();
+    void pop() {
+        if (st.top() == minSt.top()) {
+            minSt.pop();
         }
-
         st.pop();
     }
 
-    int top()
-    {
-        if (st.top() < minVal)
-        {
-            return minVal;
-        }
-
+    int top() {
         return st.top();
     }
 
-    int getMin()
-    {
-        return minVal;
+    int getMin() {
+        return minSt.top();
     }
 };
 
-int main()
-{
+int main() {
     cout << "Boiler Plate Code" << endl;
     return 0;
 }
